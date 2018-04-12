@@ -7,7 +7,7 @@ package xyz.neolith.javalearning.basicknowledge;
 public class CharTest {
     public static void main(String[] args) {
         //use the unicode character
-        Character c = '你';
+        Character c = '\u4f60';
         System.out.println(c);
     }
 }
