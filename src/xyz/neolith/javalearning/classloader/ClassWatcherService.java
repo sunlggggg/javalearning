@@ -1,7 +1,5 @@
 package xyz.neolith.javalearning.classloader;
 
-import xyz.neolith.javalearning.classloader.RefChange;
-
 import static java.nio.file.StandardWatchEventKinds.ENTRY_CREATE;
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 import static java.nio.file.StandardWatchEventKinds.OVERFLOW;
@@ -26,13 +24,13 @@ public class ClassWatcherService implements Runnable {
     private HashSet<RefChange> RefChangeSet = null;
     private static ClassWatcherService classWatcherService = null;
     private Object ClassTemp;
-    private boolean IsRuner = false;
+    private boolean IsRunner = false;
 
     private ClassWatcherService() {
         try {
             watcher = FileSystems.getDefault().newWatchService();
             Paths.get(path).register(watcher, ENTRY_CREATE, ENTRY_MODIFY);
-            RefChangeSet = new HashSet<RefChange>(20);
+            RefChangeSet = new HashSet<>(20);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,12 +43,8 @@ public class ClassWatcherService implements Runnable {
         return classWatcherService;
     }
 
-    public boolean IsRun() {
-        return IsRuner;
-    }
-
     public ClassWatcherService StartServers() {
-        if (!IsRuner)
+        if (!IsRunner)
             new Thread(this).start();
         return this;
     }
@@ -91,8 +85,8 @@ public class ClassWatcherService implements Runnable {
     @Deprecated
     @Override
     public void run() {
-        if (!IsRuner) {
-            IsRuner = !IsRuner;
+        if (!IsRunner) {
+            IsRunner = !IsRunner;
             handleEvents();
         }
         System.err.println("文件监听已运行");

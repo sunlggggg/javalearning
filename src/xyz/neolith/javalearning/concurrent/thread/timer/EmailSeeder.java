@@ -1,4 +1,4 @@
-package xyz.neolith.javalearning.timer;
+package xyz.neolith.javalearning.concurrent.thread.timer;
 
 import java.util.Timer;
 import java.util.TimerTask;

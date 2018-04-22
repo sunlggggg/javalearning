@@ -16,7 +16,6 @@ import java.util.List;
 
 public class PECSDemo {
 
-
     public static void main(String[] args) {
         List<Mammal> ListMammal = new ArrayList<>();
         ListMammal.add(new Mammal());
