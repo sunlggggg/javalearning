@@ -17,6 +17,10 @@ flip()
 write mode (channel to the buffer) translate to read mode(buffer to channel)
 
 rewind() 
+###Selector
+allow the signal thread to deal with multiple channel
+
+
 
 
 

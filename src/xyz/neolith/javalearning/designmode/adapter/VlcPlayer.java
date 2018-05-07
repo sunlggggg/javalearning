@@ -1,4 +1,4 @@
-package xyz.neolith.javalearning.designmode.adapterpattern;
+package xyz.neolith.javalearning.designmode.adapter;
 
 /**
  * @author sunlggggg
