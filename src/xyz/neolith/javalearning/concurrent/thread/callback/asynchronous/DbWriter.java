@@ -2,9 +2,12 @@ package xyz.neolith.javalearning.concurrent.thread.callback.asynchronous;
 
 /**
  * 耗时操作
+ *
+ * @author sunlggggg
  */
-public class DBWriter {
-    void writer(String res ) throws InterruptedException {
+public class DbWriter {
+
+    void writer(String res) throws InterruptedException {
         System.out.println("write into db ...");
         Thread.sleep(3000L);
         System.out.println("the info is " + res);

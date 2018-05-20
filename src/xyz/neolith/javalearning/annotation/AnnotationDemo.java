@@ -1,10 +1,14 @@
 package xyz.neolith.javalearning.annotation;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * 自定义注解demo
+ *
+ * @author sunlggggg
+ */
 public class AnnotationDemo {
-    @PermissionChecker({UserType.COSTOMER})
+    @PermissionChecker({UserType.CUSTOMER})
     public void test02() throws ClassNotFoundException, NoSuchMethodException {
         Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test02");
@@ -14,7 +18,7 @@ public class AnnotationDemo {
         }
     }
 
-    @PermissionChecker({UserType.COSTOMER, UserType.MANAGER})
+    @PermissionChecker({UserType.CUSTOMER, UserType.MANAGER})
     public void test01() throws ClassNotFoundException, NoSuchMethodException {
         Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test01");

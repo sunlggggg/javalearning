@@ -12,7 +12,8 @@ public class ForeachDemo {
         List<String> a = new ArrayList<>();
         a.add("1");
         a.add("2");
-        for (String temp : a) { //不要使用foreach 删除
+        //不要使用foreach 删除
+        for (String temp : a) {
             if ("2".equals(temp)) {
                 a.remove(temp);
             }
