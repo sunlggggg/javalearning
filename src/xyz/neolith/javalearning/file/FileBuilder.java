@@ -14,8 +14,8 @@ public class FileBuilder {
 
     private static final int FILE_SIZE = 1024;
     private static final String PATH = "/Users/sunligang/Documents/";
-    private static final String FILENAME = "11M.xls";
-    private static final  int BEI_SHU = 1024*11;
+    private static final String FILENAME = "100M.xls";
+    private static final  int BEI_SHU = 1024*100;
 
     public void CreateBigFile() {
 
@@ -44,13 +44,8 @@ public class FileBuilder {
         }
     }
 
-
     public static void main(String[] args) {
         new FileBuilder().CreateBigFile();
-        for(int i = 0 ; i < 100 ; i++ ){
-            System.out.print("你");
-        }
     }
-
 
 }
