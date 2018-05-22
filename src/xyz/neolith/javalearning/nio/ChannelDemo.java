@@ -9,23 +9,25 @@ import java.nio.channels.*;
 public class ChannelDemo {
 
     @Test
-    public void testChannel() throws IOException {
-        RandomAccessFile aFile = new RandomAccessFile("data/nio-data.txt", "rw");
-        FileChannel inChannel = aFile.getChannel();
+    public void testChannel() {
 
-        ByteBuffer buf = ByteBuffer.allocate(48);
+        try(RandomAccessFile aFile = new RandomAccessFile("data/nio-data.txt", "rw");
+            FileChannel inChannel = aFile.getChannel()){
+            ByteBuffer buf = ByteBuffer.allocate(48);
 
-        int bytesRead = inChannel.read(buf);
-        while (bytesRead != -1) {
-            System.out.println("\tRead " + bytesRead);
-            buf.flip();//convert the write mode to read mode
-            while (buf.hasRemaining()) {
-                System.out.print((char) buf.get());
+            int bytesRead = inChannel.read(buf);
+            while (bytesRead != -1) {
+                System.out.println("\tRead " + bytesRead);
+                buf.flip();//convert the write mode to read mode
+                while (buf.hasRemaining()) {
+                    System.out.print((char) buf.get());
+                }
+                buf.clear();
+                bytesRead = inChannel.read(buf);
             }
-            buf.clear();
-            bytesRead = inChannel.read(buf);
+        }catch (Exception e){
+            e.printStackTrace();
         }
-        aFile.close();
     }
 
     /**
