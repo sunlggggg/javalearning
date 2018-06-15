@@ -3,13 +3,15 @@ package xyz.neolith.javalearning.annotation;
 import java.lang.reflect.Method;
 
 /**
- * 自定义注解demo
+ * 自定义注解 demo
  *
  * @author sunlggggg
+ *
+ *
  */
 public class AnnotationDemo {
     @PermissionChecker({UserType.CUSTOMER})
-    public void test02() throws ClassNotFoundException, NoSuchMethodException {
+    private void test02() throws ClassNotFoundException, NoSuchMethodException {
         Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test02");
         PermissionChecker permissionChecker = method.getAnnotation(PermissionChecker.class);
@@ -19,7 +21,7 @@ public class AnnotationDemo {
     }
 
     @PermissionChecker({UserType.CUSTOMER, UserType.MANAGER})
-    public void test01() throws ClassNotFoundException, NoSuchMethodException {
+    private void test01() throws ClassNotFoundException, NoSuchMethodException {
         Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test01");
         PermissionChecker permissionChecker = method.getAnnotation(PermissionChecker.class);
