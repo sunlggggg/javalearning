@@ -11,6 +11,12 @@ import java.util.Calendar;
  */
 public class Logger {
 
+    public static class Builder {
+        public static Logger getLogger(Class<?> clazz) {
+            return new Logger(clazz);
+        }
+    }
+
     private static final int COMPLETE_DISPLAY_PACKAGE_NAME = 2;
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     private StringBuilder simpleClazzName = new StringBuilder();
@@ -32,15 +38,19 @@ public class Logger {
     }
 
 
-    public void info(String info) {
+    public void info(Object info) {
         System.out.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "] info : " + info);
     }
 
-    public void err(String info) {
+    public void err(Object info) {
         System.err.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "]  err : " + info);
     }
 
-    public void warn(String info) {
+    public void warn(Object info) {
         System.err.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "] warm : " + info);
+    }
+
+    public void blackLine() {
+        System.out.println();
     }
 }

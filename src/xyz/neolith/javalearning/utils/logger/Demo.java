@@ -5,7 +5,7 @@ package xyz.neolith.javalearning.utils.logger;
  * @date 2018-05-11 21:22.
  */
 public class Demo {
-    private static Logger logger = LoggerUtil.getLogger(Demo.class);
+    private static Logger logger = Logger.Builder.getLogger(Demo.class);
 
     public static void main(String[] args) {
         logger.info("hello world");

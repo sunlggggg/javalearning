@@ -2,7 +2,6 @@ package xyz.neolith.javalearning.concurrent.thread.threadpool.newsinglethreadexe
 
 
 import xyz.neolith.javalearning.utils.logger.Logger;
-import xyz.neolith.javalearning.utils.logger.LoggerUtil;
 
 import java.util.Random;
 import java.util.concurrent.*;
@@ -13,7 +12,7 @@ import java.util.concurrent.*;
  */
 public class Demo {
 
-    private static Logger logger = LoggerUtil.getLogger(Demo.class);
+    private static Logger logger = Logger.Builder.getLogger(Demo.class);
     private static final int REPEAT_COUNT = 10;
     private static final String THREAD_NAME = "Demo";
     private static int counter = 0;

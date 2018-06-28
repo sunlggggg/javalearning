@@ -1,7 +1,6 @@
 package xyz.neolith.javalearning.stream;
 
 import xyz.neolith.javalearning.utils.logger.Logger;
-import xyz.neolith.javalearning.utils.logger.LoggerUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
  */
 public class SumDemo {
     private static final int repeated_times = 10;
-    private static Logger logger = LoggerUtil.getLogger(SumDemo.class);
+    private static Logger logger = Logger.Builder.getLogger(SumDemo.class);
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
