@@ -1,6 +1,6 @@
 package xyz.neolith.javalearning.annotation.notnull;
 
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.internal.NotNull;
 
 import java.util.HashMap;
 import java.util.List;

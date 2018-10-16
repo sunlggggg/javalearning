@@ -4,7 +4,7 @@ package xyz.neolith.javalearning.concurrent.cooperation;
  * @author sunligang
  * @date 2018/09/25
  */
-public class NotifyAllTest {
+public class NotifyTest {
     // synchronized 提供了 monitor
     public synchronized void testWait() {
         System.out.println(1);
@@ -17,10 +17,15 @@ public class NotifyAllTest {
     }
 
     public static void main(String[] args) {
-        NotifyAllTest notifyTest = new NotifyAllTest();
+        final NotifyTest notifyTest = new NotifyTest();
         new Thread(()-> notifyTest.testWait()).start();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         synchronized (notifyTest) {
-            notifyTest.notifyAll();
+            notifyTest.notify();
         }
     }
 }

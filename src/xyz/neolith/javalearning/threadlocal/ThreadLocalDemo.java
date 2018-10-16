@@ -1,6 +1,6 @@
 package xyz.neolith.javalearning.threadlocal;
 
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.internal.NotNull;
 import xyz.neolith.javalearning.utils.logger.Logger;
 
 import java.util.concurrent.LinkedBlockingDeque;

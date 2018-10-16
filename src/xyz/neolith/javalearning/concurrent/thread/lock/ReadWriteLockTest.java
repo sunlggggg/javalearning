@@ -1,4 +1,4 @@
-package xyz.neolith.javalearning.lock;
+package xyz.neolith.javalearning.concurrent.thread.lock;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
