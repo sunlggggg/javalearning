@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+           // "console": "internalConsole",
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "mainClass": "com.github.sunlggggg.javalearning.concurrent.Demo",
+            "args": "",
+            "projectName": "java_learning"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AnnotationDemo",
             "request": "launch",
             "cwd": "${workspaceFolder}",
