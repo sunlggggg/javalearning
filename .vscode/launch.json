@@ -2,43 +2,14 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - InterruptedTest",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "xyz.neolith.javalearning.concurrent.InterruptedTest",
-            "args": ""
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - DaemonTest",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "xyz.neolith.javalearning.concurrent.DaemonTest",
-            "args": ""
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - StaticPoolTest",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "xyz.neolith.javalearning.ref.StaticPoolTest",
-            "args": ""
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - ThreadState",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
-            "mainClass": "xyz.neolith.javalearning.concurrent.ThreadState",
-            "args": ""
+            "mainClass": "com.github.sunlggggg.javalearning.concurrent.ThreadState",
+            "args": "",
+            "projectName": "java_learning"
         }
     ]
 }

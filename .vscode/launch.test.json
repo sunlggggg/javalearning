@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "java_learning",
+                "projectName": "java_learning",
+                "workingDirectory": "/Users/sunligang/IdeaProjects/javalearning",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "java_learning",
+                "projectName": "java_learning",
+                "workingDirectory": "/Users/sunligang/IdeaProjects/javalearning",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
