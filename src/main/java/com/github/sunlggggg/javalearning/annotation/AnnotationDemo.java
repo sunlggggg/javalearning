@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 public class AnnotationDemo {
     @PermissionChecker({UserType.CUSTOMER})
     private void test02() throws ClassNotFoundException, NoSuchMethodException {
-        Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
+        Class<?> demoClass = Class.forName("com.github.sunlggggg.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test02");
         PermissionChecker permissionChecker = method.getAnnotation(PermissionChecker.class);
         for (UserType userType : permissionChecker.value()) {
@@ -22,7 +22,7 @@ public class AnnotationDemo {
 
     @PermissionChecker({UserType.CUSTOMER, UserType.MANAGER})
     private void test01() throws ClassNotFoundException, NoSuchMethodException {
-        Class<?> demoClass = Class.forName("xyz.neolith.javalearning.annotation.AnnotationDemo");
+        Class<?> demoClass = Class.forName("com.github.sunlggggg.javalearning.annotation.AnnotationDemo");
         Method method = demoClass.getMethod("test01");
         PermissionChecker permissionChecker = method.getAnnotation(PermissionChecker.class);
         for (UserType userType : permissionChecker.value()) {

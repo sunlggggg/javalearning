@@ -2,6 +2,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AnnotationDemo",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.github.sunlggggg.javalearning.annotation.AnnotationDemo",
+            "args": "",
+            "projectName": "java_learning"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JoinTest",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.github.sunlggggg.javalearning.concurrent.cooperation.JoinTest",
+            "args": "",
+            "projectName": "java_learning"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ThreadState",
             "request": "launch",
             "cwd": "${workspaceFolder}",
