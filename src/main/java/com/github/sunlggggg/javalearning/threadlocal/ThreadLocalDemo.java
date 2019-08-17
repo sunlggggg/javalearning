@@ -27,7 +27,6 @@ public class ThreadLocalDemo {
                 new LinkedBlockingDeque<>(),
                 new ThreadFactory() {
                     int counter;
-
                     @Override
                     public Thread newThread(Runnable r) {
                         return new Thread(r, "thread-" + counter++);

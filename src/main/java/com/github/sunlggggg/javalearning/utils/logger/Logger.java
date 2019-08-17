@@ -50,6 +50,19 @@ public class Logger {
         System.err.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "] warm : " + info);
     }
 
+    public void info(String info) {
+        System.out.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "] info : " + info);
+    }
+
+    public void err(String info) {
+        System.err.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "]  err : " + info);
+    }
+
+    public void warn(String info) {
+        System.err.println(simpleDateFormat.format(calendar.getTime()) + "[" + simpleClazzName + "] warm : " + info);
+    }
+
+
     public void blackLine() {
         System.out.println();
     }
